@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3E02FA09221CF1DB005A2955"
-               BuildableName = "LocalFetch_iOS.framework"
-               BlueprintName = "LocalFetch.iOS"
+               BlueprintIdentifier = "3E02FA17221CF208005A2955"
+               BuildableName = "LocalFetch.framework"
+               BlueprintName = "LocalFetch.macOS"
                ReferencedContainer = "container:LocalFetch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3E02FA09221CF1DB005A2955"
-            BuildableName = "LocalFetch_iOS.framework"
-            BlueprintName = "LocalFetch.iOS"
+            BlueprintIdentifier = "3E02FA17221CF208005A2955"
+            BuildableName = "LocalFetch.framework"
+            BlueprintName = "LocalFetch.macOS"
             ReferencedContainer = "container:LocalFetch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3E02FA09221CF1DB005A2955"
-            BuildableName = "LocalFetch_iOS.framework"
-            BlueprintName = "LocalFetch.iOS"
+            BlueprintIdentifier = "3E02FA17221CF208005A2955"
+            BuildableName = "LocalFetch.framework"
+            BlueprintName = "LocalFetch.macOS"
             ReferencedContainer = "container:LocalFetch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
