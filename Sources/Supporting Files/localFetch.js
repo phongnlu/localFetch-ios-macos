@@ -6,7 +6,3 @@ window.fetch = function(uri, json) {
         return existingFetch(uri, json);
     }
 }
-
-localFetch.load = function() {
-    console.log('not implemented');
-}
