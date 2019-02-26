@@ -10,12 +10,11 @@ import WebKit
 import XWKWebView
 
 public class LocalFetch {
-    private var webView: WKWebView
-    private var xwebview: XWKWebView?
+    private var xwkWebView: XWKWebView
     public static var enableLogging = true
     
-    public init(_ webView: WKWebView) {
-        self.webView = webView
+    public init(_ xwkWebView: XWKWebView) {
+        self.xwkWebView = xwkWebView
         
         let bundle = Bundle(for: LocalFetch.self)
         //inject localFetch.js
@@ -25,13 +24,11 @@ public class LocalFetch {
                 return
         }
         let script = WKUserScript(source: source as String, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-        let userContentController = webView.configuration.userContentController
+        let userContentController = xwkWebView.webView.configuration.userContentController
         userContentController.addUserScript(script)
-        
-        xwebview = XWKWebView(webView)
     }
     
     public func registerRouteBase(_ obj: AnyObject, routeBase: String) {
-        xwebview?.registerPlugin(obj, namespace: routeBase)
+        xwkWebView.registerPlugin(obj, namespace: routeBase)
     }
 }
