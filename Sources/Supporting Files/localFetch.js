@@ -27,5 +27,3 @@
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
  })();
-
-//local://fileManager/read?param1=123&param2=test
