@@ -15,7 +15,9 @@
         var route = path[1];
         var method = json.method.toLowerCase();
         if (route) {
-            eval('return ' + routeBase + '.' + method + capitalize(route) + '(json)');
+            var cmd = 'return ' + routeBase + '.' + method + capitalize(route) + '(json)';
+            console.log('cmd: ' + cmd);
+            eval(cmd);
         } else {
             throw new Error('route not found. Route base: ' + routeBase + ', route: ' + route);
         }
