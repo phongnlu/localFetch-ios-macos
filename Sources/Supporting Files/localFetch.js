@@ -8,8 +8,20 @@
         }
     }
 
-    var localFetchWrapper = function(uri, json) {
+    function localFetchWrapper(uri, json) {
         json.uri = uri;
-        return localFetch.load(json);
+        var path = uri.replace(/local\:\/\//gi, '').split('/');
+        var routeBase = path[0];
+        var route = path[1];
+        var method = json.method.toLowerCase();
+        if (route) {
+            eval('return ' + routeBase + '.' + method + capitalize(route) + '(json)');
+        } else {
+            throw new Error('route not found. Route base: ' + routeBase + ', route: ' + route);
+        }
+    }
+                               
+    function capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
     }
  })();

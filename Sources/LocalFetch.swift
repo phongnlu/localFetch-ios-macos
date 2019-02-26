@@ -11,6 +11,7 @@ import XWKWebView
 
 public class LocalFetch {
     private var webView: WKWebView
+    private var xwebview: XWKWebView?
     public static var enableLogging = true
     
     public init(_ webView: WKWebView) {
@@ -27,7 +28,10 @@ public class LocalFetch {
         let userContentController = webView.configuration.userContentController
         userContentController.addUserScript(script)
         
-        let xwebview = XWKWebView(webView);
-        xwebview.registerPlugin(LocalFetchPlugin(), namespace: "localFetch")
+        xwebview = XWKWebView(webView)
+    }
+    
+    public func registerRouteBase(_ obj: AnyObject, routeBase: String) {
+        xwebview?.registerPlugin(obj, namespace: routeBase)
     }
 }
