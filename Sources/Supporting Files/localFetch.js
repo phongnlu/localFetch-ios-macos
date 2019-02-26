@@ -14,9 +14,9 @@
         var routeBase = path[0];
         var route = path[1];
         var method = json.method.toLowerCase();
-        if (route) {
+        if (eval(routeBase + '.' + method + capitalize(route))) {
             var cmd = routeBase + '.' + method + capitalize(route) + '(json)';
-            console.log('cmd: ' + cmd);
+            console.log('Invoking api: ' + cmd);
             return eval(cmd);
         } else {
             throw new Error('route not found. Route base: ' + routeBase + ', route: ' + route);
