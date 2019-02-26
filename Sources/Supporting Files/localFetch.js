@@ -12,7 +12,7 @@
         json.uri = uri;
         var path = uri.replace(/local\:\/\//gi, '').split('/');
         var routeBase = path[0];
-        var route = path[1].split('?');
+        var route = path[1].split('?')[0];
         var method = json.method.toLowerCase();
         if (eval(routeBase + '.' + method + capitalize(route))) {
             var cmd = routeBase + '.' + method + capitalize(route) + '(json)';
