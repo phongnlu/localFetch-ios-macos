@@ -23,7 +23,7 @@ Note: [Carthage required](https://github.com/Carthage/Carthage)
 
 - A local fetch call will looks like this
 
-```jvascript
+```javascript
 fetch('local://os/info', {
     method: 'GET',
     headers: {},
@@ -67,7 +67,7 @@ public class System: NSObject {
 
 - There's some automatic mapping between fetch uri value and Swift class method. So following convention is put in place
 
-```jvascript
+```javascript
 fetch('local://{routeBase}/{route}', {
     method: {method}    // either GET or POST
     headers: {},
@@ -87,7 +87,7 @@ Here, we say {nativeClass} class will manage all {routeBase} uri. Each {route} w
 
 - For example
 
-```jvascript
+```javascript
 fetch('local://fileManager/read/?param1=123&param2=test', {
     method: POST
     headers: {},
